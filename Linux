@@ -12,3 +12,8 @@ sudo apt install libgsettings-qt1
 而apt-get下载某个包中它的所有依赖项都必须存在，这就是为什么我们每次执行apt-get的时候都需要先apt-get update的更新软件包的原因。
 
 如果提示找不到aptitude，可以先使用sudo apt-get install aptitude进行下载
+
+更新软件源库命令
+1|sudo apt-get update
+2|sudo apt-get dist-upgrade
+3|sudo apt-get install --reinstall software-center
