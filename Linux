@@ -1,1 +1,13 @@
 
+# Linux安装输入法问题
+
+问题现象：安装后无法输入中文
+1.尝试运行如下命令安装依赖
+sudo apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2
+ 
+sudo apt install libgsettings-qt1
+出现问题  无法修正错误，因为您要求某些软件包保持现状，就是它们破坏了软件包间的依赖关系
+
+解决：换命令sudo aptitude  install <packgename>，因为aptitude会自动把所有依赖的库都帮你顺着找到，并下载好。而apt-get下载某个包中它的所有依赖项都必须存在，这就是为什么我们每次执行apt-get的时候都需要先apt-get update的更新软件包的原因。
+
+如果提示找不到aptitude，可以先使用sudo apt-get install aptitude进行下载
